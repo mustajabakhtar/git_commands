@@ -1,0 +1,57 @@
+which git
+git --version
+cd ~
+curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
+ls -la
+mv ~/git-completion.bash ~/.git-completion.bash
+
+vi .bash_profile
+
+if [ -f ~/.git-completion.bash ]; then
+source ~/.git-completion.bash
+fi
+
+Edit name and e-mail in git
+---------------------------
+git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+git commit --amend --reset-author
+
+git help
+git help log
+man git-help
+git init
+pwd -Present working directory
+ls -la .git/
+git add . -Add everything in the current directory
+
+Write commit message in present tense not past tense.
+git log -n 1
+git log --grep="Init"
+
+Repository->Staging Index->Working Copy : Three tree architecture
+SHA-
+40 characters hexadecimal string
+
+cat HEAD
+
+git diff             |
+git diff index.html  | This simply compares the working copy with the repository.
+git diff --staged    | This compares the staged file with repo
+
+git rm <file-name>
+now do a git commit .
+
+Moving and renaming file.
+-------------------------
+git mv <file1>  <to> <file2>
+
+git checkout -- <file name> This is to update from the repo
+
+Reset and undo changes:
+------------------------
+git reset --soft <SHA-1> Move the repo to point to specified commit but staged index commit are preserved.
+git reset --mixed <SHA-1> Moves the repo to point to specified commit with clean index in staged area. Working repo is preserved.
+git reset --hard <SHA-1> Cleans all to point to the specified commit.
