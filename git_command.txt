@@ -64,3 +64,7 @@ Reset and undo changes:
 git reset --soft <SHA-1> Move the repo to point to specified commit but staged index commit are preserved.
 git reset --mixed <SHA-1> Moves the repo to point to specified commit with clean index in staged area. Working repo is preserved.
 git reset --hard <SHA-1> Cleans all to point to the specified commit.
+
+Create a new branch and switch to that branch
+—————————————————————————————————————————————
+git branch -b <branch-name>
