@@ -68,3 +68,7 @@ git reset --hard <SHA-1> Cleans all to point to the specified commit.
 Create a new branch and switch to that branch
 —————————————————————————————————————————————
 git branch -b <branch-name>
+
+Delete a branch by following command
+————————————————————————————————————-
+git branch -d <branch-name>
